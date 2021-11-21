@@ -1,0 +1,44 @@
+.headder{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 10;
+}
+
+.abs{
+    position: absolute;
+    width: 100%;
+}
+
+.containerr{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.containerr .sectionn{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-blend-mode: multiply;
+    scroll-snap-align: start;
+}
+
+.containerr .sectionn:nth-child(1){
+    background: #ff0 url("");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.containerr .sectionn:nth-child(2){
+    background: rgb(190, 190, 101) url("");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page{
+    height: 100vh;
+    width: 100%;
+}
