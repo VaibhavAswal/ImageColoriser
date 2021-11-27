@@ -123,7 +123,6 @@ html{scroll-behavior:smooth;}
 .gallery {
     position: relative;
     height: auto;
-    width: auto;
 }
 
 .gallerybottom {
@@ -133,7 +132,6 @@ html{scroll-behavior:smooth;}
     justify-content: center;
     position: relative;
     bottom: 0px;
-    width: 100%;
     height: auto;
     background-color: #ff0000;
     color: #ffffff;

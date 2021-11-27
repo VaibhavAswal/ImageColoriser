@@ -13,6 +13,7 @@ $('#colorise').bind("click",function()
    else
      {
     animate();
+    document.getElementById("imageb").src = ("../images/loading.gif");
     (async function () {
         var resp = await deepai.callStandardApi('colorizer', {
             image: document.getElementById('myFile'),
@@ -42,7 +43,7 @@ function animate() {
                 document.querySelector("#loading").classList.remove("animate");
                 document.getElementById("colorise").blur();
                 document.querySelector("#loading").classList.add("animate"); document.querySelector("#toast").classList.remove("popped");
-                setTimeout(stopAnim, 6500);
+                setTimeout(stopAnim, 5000);
                 if (undo) {
                     document.querySelector("#toast .big").textContent = 'Alright.';
                     document.querySelector("#toast .info").textContent = 'We undid that thing.';
