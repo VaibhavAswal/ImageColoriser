@@ -120,3 +120,21 @@ html{scroll-behavior:smooth;}
     margin: 0px;
     padding: 0px;
 }
+.gallery {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.gallerybottom {
+    padding: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    background-color: #ff0000;
+    color: #ffffff;
+}

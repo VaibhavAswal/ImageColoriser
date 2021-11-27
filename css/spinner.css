@@ -1,0 +1,123 @@
+/* If you're copying this pen for your project, these are the keyframes you're interested in! You'll have to prefix it yourself. */
+@keyframes grow-up {
+    0% {
+      transform: translate(0, 100%);
+    }
+    33% {
+      transform: translate(0, 0);
+    }
+    67% {
+      transform: translate(0, -100%);
+    }
+    100% {
+      transform: translate(0, -100%);
+    }
+  }
+  
+  @keyframes toast-popup {
+    0% {
+      transform: translate(0, 100%);
+    }
+    10% {
+      transform: translate(0, 0);
+    }
+    90% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+
+  
+  /* modifiers */
+  
+  .big {
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+ .toast a {
+    color: orange;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* toast styles */
+  #toast {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background: #22222F;
+    color: white;
+    font-size: 16px;
+    transform: translate(0, 100%);
+    z-index: 999
+  }
+  
+  #toast.popped {
+    animation: toast-popup 6s;
+  }
+  
+  
+  /* loading div styles. If you're copying this pen for your project, these are the styles you should be interested in!
+  
+  WARNING: Note it's not prefixed! You might want to check the compiled version! */
+  
+  #loading span {
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 7vw;
+  }
+  
+  #loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #F44;
+    z-index: 10;
+    transform: translate(0, 100%);
+    transition: transform 1s;
+    overflow: hidden;
+  }
+  
+  #loading::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #FF4;
+    z-index: 20;
+    transform: translate(0, 100%);
+    animation: grow-up 4s infinite;
+  }
+  
+  #loading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0%;
+    top: 0;
+    bottom: 0;
+    background: #44F;
+    z-index: 30;
+    transform: translate(0, 100%);
+    animation: grow-up 4s infinite;
+    animation-delay: 1.25s;
+  }
+  
+  #loading.animate {
+    transform: translate(0, 0);
+  }
