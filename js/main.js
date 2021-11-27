@@ -13,7 +13,7 @@ $('#colorise').bind("click",function()
    else
      {
     animate();
-    document.getElementById("imageb").src = ("../images/loading.gif");
+    document.getElementById("imageb").src = ("https://imgur.com/a/61olzvQ");
     (async function () {
         var resp = await deepai.callStandardApi('colorizer', {
             image: document.getElementById('myFile'),
